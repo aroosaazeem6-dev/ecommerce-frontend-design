@@ -1,0 +1,615 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/products-details.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container header-top">
+
+            <!-- BRAND -->
+            <div class="brand">
+                <img src="assets/assets/Layout/Brand/logo-colored.png">
+            </div>
+
+
+            <!-- SEARCH BAR -->
+            <div class="search-box">
+
+                <input type="text" placeholder="Search">
+
+                <select>
+                    <option>All category</option>
+                    <option>Electronics</option>
+                    <option>Clothes</option>
+                </select>
+
+                <button>Search</button>
+
+            </div>
+
+
+            <!-- ICON MENU -->
+            <div class="header-icons">
+
+                <div class="icon-item">
+                    <img src="assets/profile.png">
+                    <span>Profile</span>
+                </div>
+
+                <div class="icon-item">
+                    <img src="assets/comment.png">
+                    <span>Message</span>
+                </div>
+
+                <div class="icon-item">
+                    <img src="assets/heart (1).png">
+                    <span>Orders</span>
+                </div>
+
+                <a href="cart.html" class="icon-item">
+                    <img src="assets/shopping-cart.png">
+                    <span>My cart</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="container nav-inner">
+
+            <!-- LEFT MENU -->
+            <ul class="nav-left">
+
+                <li class="menu-icon">☰</li>
+                <li>All category</li>
+                <li>Hot offers</li>
+                <li>Gift boxes</li>
+                <li>Projects</li>
+                <li>Menu item</li>
+
+                <li class="help">
+                    Help
+                    <img src="assets/assets/Layout/Form/input-group/Icon/control/Vector.png">
+
+                    <ul class="help-dropdown">
+                        <li>Support</li>
+                        <li>FAQ</li>
+                        <li>Contact</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+
+
+            <!-- RIGHT MENU -->
+            <div class="nav-right">
+
+                <!-- LANGUAGE -->
+                <div class="dropdown">
+
+                    <div class="dropdown-btn" onclick="toggleDropdown('languageMenu')">
+                        English, USD
+                        <img src="assets/assets/Layout/Form/input-group/Icon/control/Vector.png">
+                    </div>
+
+                    <ul class="dropdown-menu" id="languageMenu">
+
+                        <li>English</li>
+                        <li>Spanish</li>
+                        <li>German</li>
+                        <li>French</li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- COUNTRY -->
+                <div class="dropdown">
+
+                    <div class="dropdown-btn" onclick="toggleDropdown('countryMenu')">
+                        Ship to <img src="assets/assets/Layout1/Image/flags/DE@2x.png">
+                        <img src="assets/assets/Layout/Form/input-group/Icon/control/Vector.png">
+                    </div>
+
+                    <ul class="dropdown-menu" id="countryMenu">
+
+                        <li><img src="assets/assets/Layout1/Image/flags/US@2x.png"> USA</li>
+                        <li><img src="assets/assets/Layout1/Image/flags/GB@2x.png"> UK</li>
+                        <li><img src="assets/assets/Layout1/Image/flags/DE@2x.png"> Germany</li>
+                        <li><img src="assets/assets/Layout1/Image/flags/FR@2x.png"> France</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- BREADCRUMB -->
+
+    <section class="breadcrumb-section">
+        <div class="container breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <img src="assets/chevron.png">
+
+            <a href="products.html">Clothings</a>
+
+            <img src="assets/chevron.png">
+
+            <a href="products.html">Men's wear</a>
+
+            <img src="assets/chevron.png">
+
+            <a>Summer clothing</a>
+
+        </div>
+    </section>
+    <!-- PRODUCT DETAILS SECTION -->
+    <section class="product-detail">
+        <div class="container">
+
+            <div class="product-box">
+
+                <!-- LEFT SIDE -->
+                <div class="product-images">
+
+                    <!-- MAIN IMAGE -->
+                    <div class="main-image">
+                        <img id="productImage">
+                    </div>
+
+                    <!-- THUMBNAILS -->
+                    <div class="thumbs">
+                        <img class="thumb">
+                        <img class="thumb">
+                        <img class="thumb">
+                        <img class="thumb">
+                        <img class="thumb">
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="action-buttons">
+                        <button class="add-cart">Add to cart</button>
+                        <button class="buy-now">Buy now</button>
+                        <button class="wish-btn">♡</button>
+                    </div>
+
+                </div>
+
+
+                <!-- MIDDLE -->
+                <div class="product-info">
+
+                    <p class="stock">✔ In stock</p>
+
+                    <!-- DYNAMIC TITLE -->
+                    <h2 id="productName"></h2>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐☆ 4.8 · 123 reviews · 123 sold
+                    </div>
+
+                    <div class="price-box">
+
+                        <div class="price-item red">
+                            <h3>$98.000</h3>
+                            <p>50-100pcs</p>
+                        </div>
+
+                        <div class="price-item">
+                            <h3>$90.000</h3>
+                            <p>224-98pcs</p>
+                        </div>
+
+                        <div class="price-item">
+                            <h3>$90.000</h3>
+                            <p>224-98pcs</p>
+                        </div>
+
+                    </div>
+
+                    <!-- DYNAMIC PRICE -->
+                    <div class="details">
+                        <p><span>Price:</span> $<span id="productPrice"></span></p>
+                        <p><span>Type:</span> Demanded</p>
+                        <p><span>Material:</span> Premium quality</p>
+                        <p><span>Design:</span> Artistic</p>
+                        <p><span>Customization:</span> Available</p>
+                        <p><span>Protection:</span> Double packing</p>
+                        <p><span>Warentee:</span> 1 year</p>
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="supplier-card">
+
+                    <div class="supplier-top">
+                        <div class="logo">M</div>
+                        <div>
+                            <p>Supplier</p>
+                            <h4>Guanji trading LLC</h4>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <p>🇩🇪 Germany, Berlin</p>
+                    <p>✔ Verified Seller</p>
+                    <p>🌐 Worldwide shipping</p>
+
+                    <button class="primary-btn">Send inquiry</button>
+                    <button class="secondary-btn">Sender's profile</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        </div>
+    </section>
+    <!-- 
+description section -->
+    <section class="product-extra">
+        <div class="container extra-layout">
+
+            <!-- LEFT SECTION -->
+            <div class="extra-left">
+
+                <!-- TABS -->
+                <div class="tabs">
+                    <span class="active">Description</span>
+                    <span>Reviews</span>
+                    <span>Shipping</span>
+                    <span>About seller</span>
+                </div>
+
+                <!-- CONTENT -->
+                <div class="tab-content">
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis vitae asperiores accusamus
+                        temporibus, quibusdam sequi maiores eaque facere incidunt repellat eos est suscipit
+                        consequuntur? Sit numquam maxime ex a, voluptas repellendus possimus praesentium, delectus velit
+                        sunt, quae officia cum enim?consequuntur? Sit numquam maxime ex a, voluptas repellendus possimus
+                        praesentium, delectus velit
+                        sunt, quae officia cum enim?
+
+                    </p>
+
+                    <!-- TABLE -->
+                    <table class="info-table">
+                        <tr>
+                            <td>Model</td>
+                            <td>#8786867</td>
+                        </tr>
+                        <tr>
+                            <td>Style</td>
+                            <td>Classic style</td>
+                        </tr>
+                        <tr>
+                            <td>Certificate</td>
+                            <td>ISO-898921212</td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>34mm x 450mm x 19mm</td>
+                        </tr>
+                        <tr>
+                            <td>Memory</td>
+                            <td>36GB RAM</td>
+                        </tr>
+                    </table>
+
+                    <!-- FEATURES -->
+                    <ul class="features">
+                        <li>✔ Some great feature name here</li>
+                        <li>✔ Lorem ipsum dolor sit amet</li>
+                        <li>✔ Duis aute irure dolor in reprehenderit</li>
+                        <li>✔ Some great feature name here</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SECTION -->
+            <div class="extra-right">
+
+                <h4>You may like</h4>
+
+                <div class="suggest-item"
+                    onclick="changeProduct('Men Blazer', 25, 'assets/assets/Layout/alibaba/Image/cloth/image 30.png')">
+
+                    <img src="assets/assets/Layout/alibaba/Image/cloth/image 30.png">
+
+                    <div>
+                        <p>Men Blazers Sets Elegant Formal</p>
+                        <span>$7.00 - $99.50</span>
+                    </div>
+                </div>
+
+                <div class="suggest-item"
+                    onclick="changeProduct('Men Shirt Sleeve Polo Contrast', 25, 'assets/assets/Layout/alibaba/Image/cloth/Bitmap.png')">
+
+                    <img src="assets/assets/Layout/alibaba/Image/cloth/Bitmap.png">
+                    <div>
+                        <p>Men Shirt Sleeve Polo Contrast</p>
+                        <span>$7.00 - $99.50</span>
+                    </div>
+                </div>
+
+
+                <div class="suggest-item"
+                    onclick="changeProduct('Jacket Series Space Gray', 30, 'assets/assets/Layout/alibaba/Image/cloth/2 1.png')">
+
+                    <img src="assets/assets/Layout/alibaba/Image/cloth/2 1.png">
+                    <div>
+                        <p>Jacket Series Space Gray</p>
+                        <span>$7.00 - $99.50</span>
+                    </div>
+                </div>
+
+
+                <div class="suggest-item"
+                    onclick="changeProduct('Basketball Crew Socks', 15, 'assets/assets/Layout/alibaba/Image/cloth/image 26.png')">
+
+                    <img src="assets/assets/Layout/alibaba/Image/cloth/image 26.png">
+                    <div>
+                        <p>Basketball Crew Socks Long Stuff</p>
+                        <span>$7.00 - $99.50</span>
+                    </div>
+                </div>
+
+
+                <div class="suggest-item"
+                    onclick="changeProduct('Summer Castrol T-Shirts', 20, 'assets/assets/Layout/alibaba/Image/cloth/Bitmap (2).png')">
+
+                    <img src="assets/assets/Layout/alibaba/Image/cloth/Bitmap (2).png">
+                    <div>
+                        <p>New Summer Men's castrol T-Shirts</p>
+                        <span>$7.00 - $99.50</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- long card -->
+    <section class="related-products">
+        <div class="container">
+
+            <div class="related-box">
+
+                <h3>Related products</h3>
+
+                <div class="related-grid">
+
+                    <div class="related-card"
+                        onclick="changeProduct('Travel Bag Premium', 40, 'assets/assets/Layout/alibaba/Image/cloth/image 24.png')">
+
+                        <img src="assets/assets/Layout/alibaba/Image/cloth/image 24.png">
+                        <p>Travel Bag Premium</p>
+                        <span>$32.00-$40.00</span>
+                    </div>
+
+
+                    <div class="related-card"
+                        onclick="changeProduct('Summer T-Shirt', 20, 'assets/assets/Layout/alibaba/Image/cloth/Bitmap (2).png')">
+
+                        <img src="assets/assets/Layout/alibaba/Image/cloth/Bitmap (2).png">
+                        <p>Summer T-Shirt</p>
+                        <span>$32.00-$40.00</span>
+                    </div>
+
+
+                    <div class="related-card"
+                        onclick="changeProduct('Smart Watch Pro', 90, 'assets/assets/Layout/alibaba/Image/tech/image 85.png')">
+
+                        <img src="assets/assets/Layout/alibaba/Image/tech/image 85.png">
+                        <p>Smart Watch Pro</p>
+                        <span>$32.00-$40.00</span>
+                    </div>
+
+
+                    <div class="related-card"
+                        onclick="changeProduct('Gaming Headset', 35, 'assets/assets/Layout/alibaba/Image/tech/image 86.png')">
+
+                        <img src="assets/assets/Layout/alibaba/Image/tech/image 86.png">
+                        <p>Gaming Headset</p>
+                        <span>$32.00-$40.00</span>
+                    </div>
+
+
+                    <div class="related-card"
+                        onclick="changeProduct('Modern Chair', 120, 'assets/assets/Layout/alibaba/Image/Interior/image 90.png')">
+
+                        <img src="assets/assets/Layout/alibaba/Image/Interior/image 90.png">
+                        <p>Modern Chair</p>
+                        <span>$32.00-$40.00</span>
+                    </div>
+
+
+                    <div class="related-card"
+                        onclick="changeProduct('Leather Wallet', 99, 'assets/assets/Layout/alibaba/Image/cloth/image 26.png')">
+
+                        <img src="assets/assets/Layout/alibaba/Image/cloth/image 26.png">
+                        <p>Leather Wallet</p>
+                        <span>$32.00-$40.00</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- discount banner -->
+    <section class="discount-banner">
+        <div class="container">
+
+            <div class="discount-box">
+
+                <div class="discount-text">
+                    <h3>Super discount on more than 100 USD</h3>
+                    <p>Have you ever finally just write dummy info</p>
+                </div>
+
+                <button class="shop-btn">Shop now</button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <!-- TOP FOOTER -->
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <img src="assets/assets/Layout/Brand/logo-colored.png">
+
+                <p>
+                    Best information about the company
+                    gives here but now lorem ipsum is
+                </p>
+
+                <div class="social-icons">
+
+                    <img src="assets/social.png">
+                    <img src="assets/twitter.png">
+                    <img src="assets/link.png">
+                    <img src="assets/youtube.png">
+
+                </div>
+
+            </div>
+
+
+            <!-- LINKS -->
+
+            <div class="footer-links">
+
+                <h4>About</h4>
+                <a>About Us</a>
+                <a>Find store</a>
+                <a>Categories</a>
+                <a>Blogs</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Partnership</h4>
+                <a>About Us</a>
+                <a>Find store</a>
+                <a>Categories</a>
+                <a>Blogs</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Information</h4>
+                <a>Help Center</a>
+                <a>Money Refund</a>
+                <a>Shipping</a>
+                <a>Contact us</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>For users</h4>
+                <a>Login</a>
+                <a>Register</a>
+                <a>Settings</a>
+                <a>My Orders</a>
+
+            </div>
+
+
+            <!-- APP DOWNLOAD -->
+
+            <div class="footer-app">
+
+                <h4>Get app</h4>
+
+                <img src="assets/assets/Layout/Misc/market-button.png">
+                <img src="assets/assets/Layout/Misc/Group.png">
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM BAR -->
+
+        <div class="footer-bottom">
+
+            <p>© 2023 Ecommerce.</p>
+
+            <div class="language-dropdown">
+
+                <div class="language-selected" onclick="toggleLanguage()">
+
+                    <img src="assets/assets/Layout1/Image/flags/US@2x.png">
+                    English
+                    <img src="assets/assets/Layout/Form/input-group/Icon/control/Vector.png">
+
+                </div>
+
+                <ul id="languageList">
+
+                    <li><img src="assets/assets/Layout1/Image/flags/US@2x.png"> English</li>
+                    <li><img src="assets/assets/Layout1/Image/flags/FR@2x.png"> French</li>
+                    <li><img src="assets/assets/Layout1/Image/flags/CN@2x.png"> Chinese</li>
+                    <li><img src="assets/assets/Layout1/Image/flags/GB@2x.png"> British</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

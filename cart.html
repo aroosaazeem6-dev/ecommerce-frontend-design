@@ -1,0 +1,355 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container header-top">
+
+            <!-- BRAND -->
+            <div class="brand">
+                <img src="assets/assets/Layout/Brand/logo-colored.png">
+            </div>
+
+            <!-- ICON MENU -->
+            <div class="header-icons">
+
+                <div class="icon-item">
+                    <img src="assets/profile.png">
+                    <span>Profile</span>
+                </div>
+
+                <div class="icon-item">
+                    <img src="assets/comment.png">
+                    <span>Message</span>
+                </div>
+
+                <div class="icon-item">
+                    <img src="assets/heart (1).png">
+                    <span>Orders</span>
+                </div>
+
+                <div class="icon-item">
+                    <img src="assets/shopping-cart.png">
+                    <span>My cart</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <!-- cart -->
+    <div class="container">
+
+        <h2>My cart (<span id="cartCount">0</span>)</h2>
+
+        <div class="cart-layout">
+
+            <!-- LEFT SIDE -->
+            <div class="cart-left">
+
+                <div id="cartItems"></div>
+
+                <!-- EMPTY -->
+                <div id="emptyCart" style="display:none;">
+                    <h3>Your cart is empty</h3>
+                    <p>Add products to continue</p>
+
+                </div>
+
+                <!-- FOOTER -->
+                <div class="cart-footer">
+                    <a href="main.html">
+                        <button class="back-btn" onclick="goBack()">← Back to shop</button>
+                    </a>
+
+                    <button class="remove-all" onclick="clearCart()">Remove all</button>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="cart-right">
+
+                <div class="coupon-box">
+                    <p>Have a coupon?</p>
+                    <div class="coupon-input">
+                        <input type="text" placeholder="Add coupon">
+                        <button>Apply</button>
+                    </div>
+                </div>
+
+                <div class="summary-box">
+                    <p>Subtotal: <span id="subtotal">$0</span></p>
+                    <p>Discount: <span class="red">-$60.00</span></p>
+                    <p>Tax: <span class="green">+$14.00</span></p>
+
+                    <hr>
+
+                    <h3>Total: <span id="total">$0</span></h3>
+
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- small cards -->
+    <section class="features-strip">
+        <div class="container features">
+
+            <div class="feature-item">
+                <div class="icon">
+                    <img src="assets/padlock.png">
+                </div>
+                <div>
+                    <h4>Secure payment</h4>
+                    <p>Have you ever finally just</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon">
+                    <img src="assets/comment.png">
+                </div>
+                <div>
+                    <h4>Customer support</h4>
+                    <p>Have you ever finally just</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon">
+                    <img src="assets/express-delivery.png">
+                </div>
+                <div>
+                    <h4>Free delivery</h4>
+                    <p>Have you ever finally just</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4cardspanel -->
+    <section class="saved-section">
+        <div class="container">
+
+            <div class="saved-box">
+
+                <h3>Saved for later</h3>
+
+                <div class="saved-grid" id="savedItems">
+
+                    <!-- CARD 1 -->
+                    <div class="saved-card">
+                        <img src="assets/assets/Image/tech/image 23.png">
+                        <h4>$50.50</h4>
+                        <p>GoPro HERO6 4K Action Camera - Black</p>
+                        <button onclick="moveToCart('GoPro HERO6', 50.50, 'assets/assets/Image/tech/image 23.png')">
+                            Move to cart
+                        </button>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="saved-card">
+                        <img src="assets/assets/Image/tech/image 32.png">
+                        <h4>$99.50</h4>
+                        <p>GoPro HERO6 4K Action Camera - Black</p>
+                        <button onclick="moveToCart('GoPro HERO6', 99.50, 'assets/assets/Image/tech/image 32.png')">
+                            Move to cart
+                        </button>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="saved-card">
+                        <img src="assets/assets/Image/tech/image 34.png">
+                        <h4>$45.50</h4>
+                        <p>GoPro HERO6 4K Action Camera - Black</p>
+                        <button onclick="moveToCart('GoPro HERO6', 45.50, 'assets/assets/Image/tech/image 34.png')">
+                            Move to cart
+                        </button>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="saved-card">
+                        <img src="assets/assets/Image/tech/8.png">
+                        <h4>$89.50</h4>
+                        <p>GoPro HERO6 4K Action Camera - Black</p>
+                        <button onclick="moveToCart('GoPro HERO6', 89.50, 'assets/assets/Image/tech/8.png')">
+                            Move to cart
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- discount banner -->
+    <section class="discount-banner">
+        <div class="container">
+
+            <div class="discount-box">
+
+                <div class="discount-text">
+                    <h3>Super discount on more than 100 USD</h3>
+                    <p>Have you ever finally just write dummy info</p>
+                </div>
+
+                <button class="shop-btn">Shop now</button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <!-- TOP FOOTER -->
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <img src="assets/assets/Layout/Brand/logo-colored.png">
+
+                <p>
+                    Best information about the company
+                    gives here but now lorem ipsum is
+                </p>
+
+                <div class="social-icons">
+
+                    <img src="assets/social.png">
+                    <img src="assets/twitter.png">
+                    <img src="assets/link.png">
+                    <img src="assets/youtube.png">
+
+                </div>
+
+            </div>
+
+
+            <!-- LINKS -->
+
+            <div class="footer-links">
+
+                <h4>About</h4>
+                <a>About Us</a>
+                <a>Find store</a>
+                <a>Categories</a>
+                <a>Blogs</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Partnership</h4>
+                <a>About Us</a>
+                <a>Find store</a>
+                <a>Categories</a>
+                <a>Blogs</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Information</h4>
+                <a>Help Center</a>
+                <a>Money Refund</a>
+                <a>Shipping</a>
+                <a>Contact us</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>For users</h4>
+                <a>Login</a>
+                <a>Register</a>
+                <a>Settings</a>
+                <a>My Orders</a>
+
+            </div>
+
+
+            <!-- APP DOWNLOAD -->
+
+            <div class="footer-app">
+
+                <h4>Get app</h4>
+
+                <img src="assets/assets/Layout/Misc/market-button.png">
+                <img src="assets/assets/Layout/Misc/Group.png">
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM BAR -->
+
+        <div class="footer-bottom">
+
+            <p>© 2023 Ecommerce.</p>
+
+            <div class="language-dropdown">
+
+                <div class="language-selected" onclick="toggleLanguage()">
+
+                    <img src="assets/assets/Layout1/Image/flags/US@2x.png">
+                    English
+                    <img src="assets/assets/Layout/Form/input-group/Icon/control/Vector.png">
+
+                </div>
+
+                <ul id="languageList">
+
+                    <li><img src="assets/assets/Layout1/Image/flags/US@2x.png"> English</li>
+                    <li><img src="assets/assets/Layout1/Image/flags/FR@2x.png"> French</li>
+                    <li><img src="assets/assets/Layout1/Image/flags/CN@2x.png"> Chinese</li>
+                    <li><img src="assets/assets/Layout1/Image/flags/GB@2x.png"> British</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
