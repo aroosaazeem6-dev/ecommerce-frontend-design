@@ -73,7 +73,8 @@ project/
 ├── assets/
 └── screenshots/
 ```
-
+## 🌐 Live Demo
+https://timely-scone-69599b.netlify.app/
 
 ## ⭐ Notes
 
