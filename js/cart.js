@@ -131,5 +131,5 @@ function moveToCart(name, price, image) {
 loadCart();
 
 function goBack() {
-    window.location.href = "main.html";
+    window.location.href = "index.html";
 }
